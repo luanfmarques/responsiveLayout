@@ -1,0 +1,408 @@
+* {
+    color: white;
+}
+
+body {
+    font-family: 'Baloo 2', cursive;
+    background: linear-gradient(to bottom, #8942a8, #ba382f);
+}
+
+.b-container {
+    max-width: 1500px;
+    min-width: 280px;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.header {
+    height: 40vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hamburguer-container {
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    display: none;
+    z-index: 9;
+}
+
+.logo-container {
+    margin-left: 20px;
+    z-index: 1;
+}
+
+.logo-container a {
+    text-decoration: none;
+    padding: 10px;
+}
+
+.logo-content {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: all 0.8s;
+}
+
+.menu-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    z-index: 2;
+}
+
+.menu-full {
+    display: flex;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 23px;
+    position: relative;
+    padding: 15px 10px;
+    margin-left: 15px;
+    z-index: 8;
+}
+
+.nav-link::before {
+    content: "";
+    width: 70%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.7s;
+}
+
+.nav-link:hover::before {
+    transform: scaleX(1);
+}
+
+.header-content {
+    width: 100%;
+    min-width: 280px;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header-content h1 {
+    font-size: 55px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.single-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.boxes {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    top: -70px;
+}
+
+.single-box li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 20s linear infinite;
+    bottom: -150px;
+}
+
+.single-box li:nth-child(1) {
+	left: 86%;
+	width: 80px;
+	height: 80px;
+	animation-delay: 0s;
+}
+
+.single-box li:nth-child(2) {
+	left: 12%;
+	width: 30px;
+	height: 30px;
+	animation-delay: 1.5s;
+	animation-duration: 10s;
+}
+
+.single-box li:nth-child(3) {
+	left: 29%;
+	width: 100px;
+	height: 100px;
+	animation-delay: 5.5s;
+}
+
+.single-box li:nth-child(4) {
+	left: 42%;
+	width: 150px;
+	height: 150px;
+	animation-delay: 0s;
+	animation-duration: 15s;
+}
+
+.single-box li:nth-child(5) {
+	left: 65%;
+	width: 40px;
+	height: 40px;
+	animation-delay: 0s;
+}
+
+.single-box li:nth-child(6) {
+	left: 15%;
+	width: 110px;
+	height: 110px;
+	animation-delay: 3.5s;
+}
+
+.single-box li:nth-child(7) {
+	left: 75%;
+	width: 200px;
+	height: 200px;
+	animation-delay: 4.5s;
+	bottom: -250px;
+}
+
+.body-content-container {
+    background-color: white;
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45vh;
+    border-radius: 5px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tw-logo {
+    height: 150px;
+}
+
+.text-content {
+    margin-left: 30px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+
+}
+
+.text-content h1, p {
+    color: black;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.text-content h1 {
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: 20px;
+}
+
+@keyframes animate {
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-800px) rotate(360deg);
+		opacity: 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .b-container {
+        height: 120vh;
+    }
+
+    .overflow {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .hamburguer-container {
+        display: flex;
+        margin-left: 10px;
+    }
+
+    .logo-container {
+        margin-left: 0;
+    }
+
+    .change .line {
+        background-color: white;
+    }
+
+    .change .line-1 {
+        transform: rotateZ(-405deg) translate(-8px, 6px);
+    }
+    
+    .change .line-2 {
+        transform: rotateZ(405deg);
+    }
+    
+    .change .line-3 {
+        opacity: 0;
+    }
+
+    .menu-container {
+        position: absolute;
+        top:-2000px;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, #8942a8, #ba382fe8);
+        transition: top .4s cubic-bezier(1, 0, 0, 1);
+    }
+
+    .menu-appear {
+        top: 0;
+        min-width: 280px;
+    }
+
+    .mobile-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-full {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 300px;
+        margin-top: -80px;
+    }
+
+    .nav-link {
+        margin: 0;
+        font-size: 30px;
+        color: white;
+        font-weight: bold;
+    }
+
+    .nav-link::before {
+        background-color: #8942a8;
+        height: 3px;
+    }
+
+    .body-content-container {
+        height: 70vh;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .text-content {
+        width: 95%;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .tw-logo {
+        height: 120px;
+    }
+
+    .copyright {
+        position: relative;
+        bottom: -35px;
+    }
+
+}
+
+@media (max-width:320px) {
+
+    .b-container {
+        height: 135vh;
+    }
+
+    .overflow {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .header {
+        height: 40vh;
+    }
+
+    .header-content h1 {
+        font-size: 35px;
+    }
+
+    .img-container {
+        padding: 15px;
+    }
+
+    .tw-logo {
+        height: 100px;
+    }
+
+    .body-content-container {
+        height: 80vh;
+    }
+
+    .text-content {
+        margin-top: 0;
+    }
+
+    .text-content h1 {
+        font-size: 30px;
+    }
+}
